@@ -5,12 +5,7 @@ namespace Relecloud.Web;
 
 public class BadCode
 {
-    //XSS vulnerability
-    public async Task XssProcessRequest(HttpContext ctx)
-    {
-        await ctx.Response.WriteAsync(
-            "The page \"" + ctx.Request.Query["page"] + "\" was not found.");
-    }
+   
 
     //SQL injection vulnerability
     public async Task SqlInjectionProcessRequest(HttpContext ctx)
