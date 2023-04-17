@@ -4,9 +4,12 @@ namespace Relecloud.Web.Api.Services.MockServices
 {
     public class MockConcertRepository : IConcertRepository
     {
+        private List<Concert> _concertList = new(); 
+
         public Task<Concert?> GetConcertByIdAsync(int id)
         {
-            return Task.FromResult<Concert?>(null);
+            var concert = _concertList.Find(c => c.Id == id);
+            return Task.FromResult<Concert?>(concert);
         }
 
         public Task<ICollection<Concert>> GetConcertsByIdAsync(ICollection<int> ids)
@@ -26,6 +29,7 @@ namespace Relecloud.Web.Api.Services.MockServices
 
         public Task<CreateResult> CreateConcertAsync(Concert newConcert)
         {
+            _concertList.Add(newConcert);
             return Task.FromResult(new CreateResult());
         }
 

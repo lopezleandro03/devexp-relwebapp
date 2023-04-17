@@ -16,4 +16,9 @@
     <PackageReference Include="coverlet.collector" Version="3.1.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Relecloud.Models\Relecloud.Web.Models.csproj" />
+    <ProjectReference Include="..\Relecloud.Web.Api\Relecloud.Web.Api.csproj" />
+  </ItemGroup>
+
 </Project>
