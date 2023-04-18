@@ -37,12 +37,18 @@ jobs:
     - name: Publish FrontEnd
       working-directory: src/Relecloud.Web
       run: dotnet publish --configuration Release --no-build --no-restore --output ../../publish/frontend
+
+    - name: Create Zip File
+      uses: papeloto/action-zip@v1
+      with:
+        files: publish/frontend
+        dest: publish/frontend.zip
     
     - name: Upload Build Artifact FrontEnd
       uses: actions/upload-artifact@v2
       with:
         name: FrontEnd_Artifact
-        path: publish/frontend
+        path: publish/frontend/frontend.zip
 
 
     - name: Publish API
