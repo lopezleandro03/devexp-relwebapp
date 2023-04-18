@@ -10,7 +10,7 @@ permissions:
   contents: read
   
 jobs: 
-  build-and-deploy:
+  build-and-test:
     runs-on: ubuntu-latest
     
     steps:
@@ -34,9 +34,12 @@ jobs:
       working-directory: ./src
       run: dotnet test --no-restore --verbosity normal
 
-    - name: Upload dotnet test results
-      uses: actions/upload-artifact@v3
+    - name: Publish
+      working-directory: ./src
+      run: dotnet publish --configuration Release --no-build --no-restore --output /publish
+
+    - name: Upload Build Artifact
+      uses: actions/upload-artifact@v2
       with:
-        name: dotnet-results-7.0.x
-        path: TestResults-7.0.x
-      if: ${{ always() }}
+        name: Application_Artifact
+        path: /pubish
