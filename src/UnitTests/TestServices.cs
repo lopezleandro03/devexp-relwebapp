@@ -36,6 +36,6 @@ public class TestServices
         var result = await s_repo.GetConcertByIdAsync(1);
 
         Assert.IsTrue(result.Equals(concert));
-        Assert.IsTrue(false);
+        
     }
 }
