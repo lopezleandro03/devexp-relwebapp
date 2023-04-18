@@ -1,3 +1,8 @@
+Demo version for DevExp Days
+
+[![Build Apps](https://github.com/azureholic/devexp-relwebapp/actions/workflows/build-apps.yml/badge.svg)](https://github.com/azureholic/devexp-relwebapp/actions/workflows/build-apps.yml)
+
+
 # Reliable web app pattern for .NET
 
 The reference implementation provides a production-grade web application that uses best practices from our guidance and gives developers concrete examples to build their own Reliable Web Application in Azure. It simulates the journey from an on-premises ASP.NET application to a migration to Azure. It shows you what changes to make to maximize the benefits of the cloud in the initial cloud adoption phase. Here's an outline of the contents in this readme:
