@@ -23,37 +23,37 @@ jobs:
         dotnet-version: '7.0.x'
 
     - name: Install dependencies
-      working-directory: ./src
+      working-directory: src
       run: dotnet restore
 
     - name: Build
-      working-directory: ./src
+      working-directory: src
       run: dotnet build --configuration Release --no-restore
 
     - name: Test
-      working-directory: ./src
+      working-directory: src
       run: dotnet test --no-restore --verbosity normal
 
     - name: Publish FrontEnd
-      working-directory: ./src/ReleCloud.Web/ReleCloud.Web.csproj
-      run: dotnet publish --configuration Release --no-build --no-restore --output ./publish/frontend
+      working-directory: src/ReleCloud.Web
+      run: dotnet publish --configuration Release --no-build --no-restore --output ../publish/frontend
     
     - name: Upload Build Artifact FrontEnd
       uses: actions/upload-artifact@v2
       with:
-        name: Application_Artifact
-        path: ../publish/frontend
+        name: FrontEnd_Artifact
+        path: publish/frontend
 
 
     - name: Publish API
-      working-directory: ./src/ReleCloud.Web.Api/ReleCloud.Web.Api.csproj
-      run: dotnet publish --configuration Release --no-build --no-restore --output ./publish/api
+      working-directory: src/ReleCloud.Web.Api
+      run: dotnet publish --configuration Release --no-build --no-restore --output ../publish/api
 
     - name: Upload Build Artifact API
       uses: actions/upload-artifact@v2
       with:
-        name: Application_Artifact
-        path: ./publish/api
+        name: API_Artifact
+        path: publish/api
 
 
    
