@@ -48,7 +48,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: FrontEnd_Artifact
-        path: publish/frontend/frontend.zip
+        path: publish/frontend.zip
 
 
     - name: Publish API
