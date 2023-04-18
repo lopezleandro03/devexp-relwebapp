@@ -1,4 +1,4 @@
-name: Build Apps
+name: Build, Test and Package Apps
 on: 
   workflow_dispatch:
   push:
@@ -10,7 +10,7 @@ permissions:
   contents: read
   
 jobs: 
-  build-and-test:
+  build-test-package:
     runs-on: ubuntu-latest
     
     steps:
@@ -50,16 +50,21 @@ jobs:
         name: FrontEnd_Artifact
         path: publish/frontend.zip
 
-
     - name: Publish API
       working-directory: src/Relecloud.Web.Api
       run: dotnet publish --configuration Release --no-build --no-restore --output ../../publish/api
 
+    - name: Create Zip File
+      uses: papeloto/action-zip@v1
+      with:
+        files: publish/api
+        dest: publish/api.zip
+ 
     - name: Upload Build Artifact API
       uses: actions/upload-artifact@v2
       with:
         name: API_Artifact
-        path: publish/api
+        path: publish/api.zip
 
 
    
