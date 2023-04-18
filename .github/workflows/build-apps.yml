@@ -23,16 +23,20 @@ jobs:
         dotnet-version: '7.0.x'
 
     - name: Install dependencies
+      working-directory: ./src
       run: dotnet restore
 
     - name: Build
+      working-directory: ./src
       run: dotnet build --configuration Release --no-restore
 
     - name: Test
+      working-directory: ./src
       run: dotnet test --no-restore --verbosity normal
 
     - name: Upload dotnet test results
       uses: actions/upload-artifact@v3
+      working-directory: ./src
       with:
         name: dotnet-results-7.0.x
         path: TestResults-7.0.x
