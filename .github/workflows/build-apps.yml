@@ -87,7 +87,7 @@ jobs:
       - name: Deploy to Frontend to Test
         uses: azure/webapps-deploy@v2
         with: 
-          app-name: rbr-testenv 
+          app-name: ${{ env.FRONTEND_APP }}
           package: publish/frontend.zip
 
       - name: Download Api Artifact
@@ -99,7 +99,7 @@ jobs:
       - name: Deploy to Api to Test
         uses: azure/webapps-deploy@v2
         with: 
-          app-name: rbr-testenv-api 
+          app-name: ${{ env.API_APP }}
           package: publish/api.zip
 
       # execute playwright tests here 
@@ -126,7 +126,7 @@ jobs:
       - name: Deploy FrontEnd to Production
         uses: azure/webapps-deploy@v2
         with: 
-          app-name: rbr-testenv 
+          app-name: ${{ env.FRONTEND_APP }} 
           package: publish/frontend.zip
 
       - name: Download API Artifact
@@ -138,7 +138,7 @@ jobs:
       - name: Deploy API to Production
         uses: azure/webapps-deploy@v2
         with: 
-          app-name: rbr-testenv-api 
+          app-name: ${{ env.API_APP }} 
           package: publish/api.zip
           
     
