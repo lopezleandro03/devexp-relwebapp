@@ -45,7 +45,7 @@ jobs:
         dest: publish/frontend.zip
     
     - name: Upload Build Artifact FrontEnd
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: FrontEnd_Artifact
         path: publish/frontend.zip
@@ -61,7 +61,7 @@ jobs:
         dest: publish/api.zip
  
     - name: Upload Build Artifact API
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: API_Artifact
         path: publish/api.zip
@@ -78,8 +78,8 @@ jobs:
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
-      - name: Download FrontEnd Artifact
-        uses: actions/download-artifact@v2
+      - name: Download Frontend Artifact
+        uses: actions/download-artifact@v3
         with:
           name: FrontEnd_Artifact
           path: publish
@@ -91,7 +91,7 @@ jobs:
           package: publish/frontend.zip
 
       - name: Download Api Artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: API_Artifact
           path: publish
