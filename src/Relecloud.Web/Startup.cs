@@ -197,6 +197,10 @@ namespace Relecloud.Web
                 });
             }
             
+            // for the demo we are using a custom domain on the appservice
+            // we've changed the default redirect URI to use the custom domain
+            // this is found in the App Configuration Service : FrontDoorUri
+
             // this sample uses AFD for the URL registered with Azure AD to make it easier to get started
             // but we recommend host name preservation for production scenarios
             // https://learn.microsoft.com/en-us/azure/architecture/best-practices/host-name-preservation
