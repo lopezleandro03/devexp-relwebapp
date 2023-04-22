@@ -34,8 +34,14 @@ public class TestServices
         await s_repo.CreateConcertAsync(concert);
 
         var result = await s_repo.GetConcertByIdAsync(1);
-
-        Assert.IsTrue(result.Equals(concert));
+        if (result is not null)
+        {
+            Assert.IsTrue(result.Equals(concert));
+        }
+        else 
+        { 
+            Assert.Fail(); 
+        }
         
     }
 }
