@@ -199,35 +199,35 @@ namespace Relecloud.Web
             
             // for the demo we are using a custom domain on the appservice
             // we've changed the default redirect URI to use the custom domain
-            // this is found in the App Configuration Service : FrontDoorUri
+            // ALL CODE THAT DEPENDS ON AFD IS COMMENTED OUT
 
             // this sample uses AFD for the URL registered with Azure AD to make it easier to get started
             // but we recommend host name preservation for production scenarios
             // https://learn.microsoft.com/en-us/azure/architecture/best-practices/host-name-preservation
-            services.Configure<ForwardedHeadersOptions>(options =>
-            {
+            //services.Configure<ForwardedHeadersOptions>(options =>
+            //{
                 // not needed when using host name preservation
-                options.ForwardedHeaders = ForwardedHeaders.XForwardedHost | ForwardedHeaders.XForwardedProto;
-            });
+            //    options.ForwardedHeaders = ForwardedHeaders.XForwardedHost | ForwardedHeaders.XForwardedProto;
+            //});
 
             services.Configure<OpenIdConnectOptions>(Configuration.GetSection("AzureAd"));
             services.Configure((Action<MicrosoftIdentityOptions>)(options =>
             {
-                var frontDoorUri = Configuration["App:FrontDoorUri"];
-                var callbackPath = Configuration["AzureAd:CallbackPath"];
+               // var frontDoorUri = Configuration["App:FrontDoorUri"];
+               // var callbackPath = Configuration["AzureAd:CallbackPath"];
 
                 options.Events = new OpenIdConnectEvents
                 {
-                    OnRedirectToIdentityProvider = ctx => {
+                  //  OnRedirectToIdentityProvider = ctx => {
                         // not needed when using host name preservation
-                        ctx.ProtocolMessage.RedirectUri = $"https://{frontDoorUri}{callbackPath}";
-                        return Task.CompletedTask;
-                    },
-                    OnRedirectToIdentityProviderForSignOut = ctx => {
+                  //      ctx.ProtocolMessage.RedirectUri = $"https://{frontDoorUri}{callbackPath}";
+                  //      return Task.CompletedTask;
+                  //  },
+                 //   OnRedirectToIdentityProviderForSignOut = ctx => {
                         // not needed when using host name preservation
-                        ctx.ProtocolMessage.PostLogoutRedirectUri = $"https://{frontDoorUri}";
-                        return Task.CompletedTask;
-                    },
+                //        ctx.ProtocolMessage.PostLogoutRedirectUri = $"https://{frontDoorUri}";
+                //        return Task.CompletedTask;
+                //    },
                     OnTokenValidated = async ctx =>
                     {
                         await CreateOrUpdateUserInformation(ctx);
@@ -280,7 +280,7 @@ namespace Relecloud.Web
             // this sample uses AFD for the URL registered with Azure AD to make it easier to get started
             // but we recommend host name preservation for production scenarios
             // https://learn.microsoft.com/en-us/azure/architecture/best-practices/host-name-preservation
-            app.UseForwardedHeaders();
+            //app.UseForwardedHeaders();
             app.UseRetryTestingMiddleware();
 
             app.UseHttpsRedirection();

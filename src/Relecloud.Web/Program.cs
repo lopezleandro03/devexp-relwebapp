@@ -11,6 +11,7 @@ if (hasRequiredConfigSettings)
     builder.Configuration.AddAzureAppConfiguration(options =>
     {
         options
+            
             .Connect(new Uri(builder.Configuration["App:AppConfig:Uri"]), new DefaultAzureCredential())
             .ConfigureKeyVault(kv =>
             {

@@ -37,7 +37,7 @@ namespace Relecloud.Web.Controllers
             }
             catch (Exception ex)
             {
-                logger.LogError(ex, $"Unable to retrive image {imageName}");
+                logger.LogError(ex, $"Unable to retrieve image {imageName}");
                 return Problem("Unable to get the image");
             }
         }
