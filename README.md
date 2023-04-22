@@ -1,6 +1,7 @@
 Demo version for DevExp Days
 
-[![Build Apps](https://github.com/azureholic/devexp-relwebapp/actions/workflows/build-apps.yml/badge.svg)](https://github.com/azureholic/devexp-relwebapp/actions/workflows/build-apps.yml)
+[![Release](https://github.com/azureholic/devexp-relwebapp/actions/workflows/CI-CD.yml/badge.svg)](https://github.com/azureholic/devexp-relwebapp/actions/workflows/CI-CD.yml)
+
 
 
 # Reliable web app pattern for .NET
