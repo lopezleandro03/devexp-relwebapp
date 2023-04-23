@@ -4,7 +4,7 @@ summary: Reliable Web App regional infrastructure
 description: Deploys the Reliable Web App to one region
 runner: ARM
 templatePath: azuredeploy.json
-parameters:
+# parameters:
 # - id: "name"
 #   name: "name"
 #   description: "Deployment unique name"
