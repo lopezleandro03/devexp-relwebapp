@@ -6,7 +6,7 @@ runner: ARM
 templatePath: azuredeploy.json
 parameters:
 - id: "name"
-  name: "Deployment unique name"
+  name: "name"
   description: "Deployment unique name"
   type: "string"
   required: true
