@@ -3,7 +3,7 @@ version: 1.0.0
 summary: Reliable Web App regional infrastructure
 description: Deploys the Reliable Web App to one region
 runner: ARM
-templatePath: azuredeploy.json
+templatePath: main.json
 parameters:
 - id: "name"
   name: "Deployment unique name"
