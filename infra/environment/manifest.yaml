@@ -27,7 +27,7 @@ parameters:
   description: "Secondary Azure location"
   type: "string"
   required: true
-  default: ""
+  default: "westeurope"
 - id: "azureSqlPassword"
   name: "azureSqlPassword"
   description: "Azure SQL password"
@@ -61,9 +61,10 @@ parameters:
   name: "azureAdClientSecretForFrontEnd"
   description: "Azure AD client secret for the front end"
   type: "string"
-  required: true"
+  required: true
 - id: "azureAdTenantId"
   name: "azureAdTenantId"
   description: "Azure AD tenant ID"
   type: "string"
-  required: true"
+  required: true
+  default: "b0c31f35-a15e-4bea-ae85-961ae07a5d14"
