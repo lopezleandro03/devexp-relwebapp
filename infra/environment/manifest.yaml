@@ -42,12 +42,12 @@ parameters:
   type: string
   default: User
 
-- id: azureAdApiScopeFrontEnd
-  name: 'AzureAD Api Scope Frontend'
-  description: 'Azure AD API scope for the front end'
-  type: string
-  # required: true
-  default: 'api://b0c31f35-a15e-4bea-ae85-961ae07a5d14/ReliableWebApp.FrontEnd'
+# - id: azureAdApiScopeFrontEnd
+#   name: 'AzureAD Api Scope Frontend'
+#   description: 'Azure AD API scope for the front end'
+#   type: string
+#   # required: true
+#   default: 'api://b0c31f35-a15e-4bea-ae85-961ae07a5d14/ReliableWebApp.FrontEnd'
 
 - id: azureAdClientIdForBackEnd
   name: 'AzureAD Client Id for Backend'
