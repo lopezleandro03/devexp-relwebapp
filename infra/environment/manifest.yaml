@@ -25,23 +25,23 @@ parameters:
   description: 'Is this a production environment?'
   type: boolean
 
-# - id: secondaryAzureLocation
-#   name: 'secondaryAzureLocation'
-#   description: 'Secondary Azure location'
-#   type: 'string'
-#   required: true
-#   default: 'westeurope'
-# - id: 'azureSqlPassword'
-#   name: 'azureSqlPassword'
-#   description: 'Azure SQL password'
-#   type: 'string'
-#   required: true
-# - id: 'principalType'
-#   name: 'principalType'
-#   description: 'Principal type of the service principal used to deploy the infrastructure'
-#   type: 'string'
-#   required: true
-#   default: 'User'
+- id: secondaryAzureLocation
+  name: 'Secondary Azure Location'
+  description: 'Secondary Azure location'
+  type: string
+  allowed:
+    - 'westus2'
+    - 'westeurope'
+    - 'northcentralus'
+    - 'northeurope'
+  default: 'westeurope'
+
+- id: 'principalType'
+  name: 'Principal Type'
+  description: 'Principal type of the service principal used to deploy the infrastructure'
+  type: 'string'
+  default: 'User'
+
 # - id: 'azureAdApiScopeFrontEnd'
 #   name: 'azureAdApiScopeFrontEnd'
 #   description: 'Azure AD API scope for the front end'

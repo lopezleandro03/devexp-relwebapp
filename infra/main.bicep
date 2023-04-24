@@ -22,7 +22,7 @@ param secondaryAzureLocation string = ''
 
 @secure()
 @description('Specifies a password that will be used to secure the Azure SQL Database')
-param azureSqlPassword string
+param azureSqlPassword string = newGuid()
 
 // Adding RBAC permissions via the script enables the sample to work around a permission propagation issue outlined in the issue
 // https://github.com/Azure/reliable-web-app-pattern-dotnet/issues/138
