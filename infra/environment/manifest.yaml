@@ -36,42 +36,43 @@ parameters:
     - 'northeurope'
   default: 'westeurope'
 
-- id: 'principalType'
+- id: principalType
   name: 'Principal Type'
   description: 'Principal type of the service principal used to deploy the infrastructure'
-  type: 'string'
-  default: 'User'
+  type: string
+  default: User
 
-- id: 'azureAdApiScopeFrontEnd'
+- id: azureAdApiScopeFrontEnd
   name: 'AzureAD Api Scope Frontend'
   description: 'Azure AD API scope for the front end'
-  type: 'string'
+  type: string
   # required: true
   default: 'api://b0c31f35-a15e-4bea-ae85-961ae07a5d14/ReliableWebApp.FrontEnd'
 
-- id: 'azureAdClientIdForBackEnd'
+- id: azureAdClientIdForBackEnd
   name: 'AzureAD Client Id for Backend'
   description: 'Azure AD client ID for the back end'
-  type: 'string'
+  type: string
   # required: true
-  default: 'b0c31f35-a15e-4bea-ae85-961ae07a5d14'
+  default: b0c31f35-a15e-4bea-ae85-961ae07a5d14
 
-- id: 'azureAdClientIdForFrontEnd'
+- id: azureAdClientIdForFrontEnd
   name: 'AzureAD ClientId for Frontend'
   description: 'Azure AD client ID for the front end'
-  type: 'string'
+  type: string
   # required: true
-  default: 'b0c31f35-a15e-4bea-ae85-961ae07a5d14'
+  default: b0c31f35-a15e-4bea-ae85-961ae07a5d14
 
 - id: 'AzureAD Client Secret for Frontend'
-  name: 'azureAdClientSecretForFrontEnd'
+  name: azureAdClientSecretForFrontEnd
   description: 'Azure AD client secret for the front end'
-  type: 'string'
+  type: string
   # required: true
+  default: secret
 
 - id: 'AzureAD Tenant Id'
-  name: 'azureAdTenantId'
+  name: azureAdTenantId
   description: 'Azure AD tenant ID'
-  type: 'string'
+  type: string
   # required: true
-  default: 'b0c31f35-a15e-4bea-ae85-961ae07a5d14'
+  default: b0c31f35-a15e-4bea-ae85-961ae07a5d14
