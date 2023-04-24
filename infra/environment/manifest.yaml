@@ -23,7 +23,8 @@ parameters:
 - id: isProd
   name: 'is Prod?'
   description: 'Is this a production environment?'
-  type: boolean
+  type: string
+  default: 'false'
 
 - id: secondaryAzureLocation
   name: 'Secondary Azure Location'
