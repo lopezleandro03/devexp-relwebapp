@@ -8,7 +8,7 @@ templatePath: azuredeploy.json
 
 parameters:
 - id: name
-  name: Name
+  name: 'App Name'
   description: 'Deployment unique name'
   type: string
   required: true
@@ -43,35 +43,35 @@ parameters:
   default: User
 
 - id: azureAdTenantId
-  name: 'AzureAD Tenant Id'
+  name: 'Azure AD Tenant Id'
   description: 'Azure AD tenant ID'
   type: string
   # required: true
-  default: b0c31f35-a15e-4bea-ae85-961ae07a5d14
+  default: 3fb4c22c-66f7-4dcd-9cc5-375a1daee825
 
 - id: azureAdApiScopeFrontEnd
-  name: 'AzureAD Api Scope Frontend'
+  name: 'Azure AD Api Scope Frontend'
   description: 'Azure AD API scope for the front end'
   type: string
   # required: true
   default: 'api://b0c31f35-a15e-4bea-ae85-961ae07a5d14/ReliableWebApp.FrontEnd'
 
 - id: azureAdClientIdForBackEnd
-  name: 'AzureAD Client Id for Backend'
+  name: 'Azure AD Client Id for Backend'
   description: 'Azure AD client ID for the back end'
   type: string
   # required: true
   default: b0c31f35-a15e-4bea-ae85-961ae07a5d14
 
 - id: azureAdClientIdForFrontEnd
-  name: 'AzureAD ClientId for Frontend'
+  name: 'Azure AD ClientId for Frontend'
   description: 'Azure AD client ID for the front end'
   type: string
   # required: true
   default: b0c31f35-a15e-4bea-ae85-961ae07a5d14
 
 - id: azureAdClientSecretForFrontEnd
-  name: 'AzureAD Client Secret for Frontend'
+  name: 'Azure AD Client Secret for Frontend'
   description: 'Azure AD client secret for the front end'
   type: string
   # required: true
