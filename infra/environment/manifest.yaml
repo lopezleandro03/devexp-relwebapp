@@ -40,7 +40,7 @@ parameters:
   name: 'Principal Type'
   description: 'Principal type of the service principal used to deploy the infrastructure'
   type: string
-  default: User
+  default: ServicePrincipal
 
 - id: azureAdTenantId
   name: 'Azure AD Tenant Id'
