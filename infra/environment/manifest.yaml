@@ -7,23 +7,26 @@ runner: ARM
 templatePath: azuredeploy.json
 
 parameters:
-- id: "name"
-  name: "name"
-  description: "Deployment unique name"
-  type: "string"
+- id: name
+  name: Name
+  description: 'Deployment unique name'
+  type: string
   required: true
-# - id: "principalId"
-#   name: "principalId"
-#   description: "Principal ID of the service principal used to deploy the infrastructure"
-#   type: "string"
-#   default: "b0c31f35-a15e-4bea-ae85-961ae07a5d14"
-#   required: true
-# - id: "isProd"
-#   name: "isProd"
-#   description: "Is this a production environment?"
-#   type: "string"
-#   required: true
-#   default: "false"
+
+- id: principalId
+  name: 'Principal Id'
+  description: 'Principal ID of the service principal used to deploy the infrastructure'
+  type: string
+  required: true
+  default: b0c31f35-a15e-4bea-ae85-961ae07a5d14
+
+- id: isProd
+  name: 'is Prod?'
+  description: 'Is this a production environment?'
+  type: boolean
+  required: true
+  default: false
+  
 # - id: "secondaryAzureLocation"
 #   name: "secondaryAzureLocation"
 #   description: "Secondary Azure location"
