@@ -17,8 +17,8 @@ parameters:
   name: 'Principal Id'
   description: 'Principal ID of the service principal used to deploy the infrastructure'
   type: string
-  required: true
-  # default: b0c31f35-a15e-4bea-ae85-961ae07a5d14
+  # required: true
+  default: b0c31f35-a15e-4bea-ae85-961ae07a5d14
 
 - id: isProd
   name: 'is Prod?'
@@ -42,32 +42,36 @@ parameters:
   type: 'string'
   default: 'User'
 
-# - id: 'azureAdApiScopeFrontEnd'
-#   name: 'azureAdApiScopeFrontEnd'
-#   description: 'Azure AD API scope for the front end'
-#   type: 'string'
-#   required: true
-#   default: 'api://b0c31f35-a15e-4bea-ae85-961ae07a5d14/ReliableWebApp.FrontEnd'
-# - id: 'azureAdClientIdForBackEnd'
-#   name: 'azureAdClientIdForBackEnd'
-#   description: 'Azure AD client ID for the back end'
-#   type: 'string'
-#   required: true
-#   default: 'b0c31f35-a15e-4bea-ae85-961ae07a5d14'
-# - id: 'azureAdClientIdForFrontEnd'
-#   name: 'azureAdClientIdForFrontEnd'
-#   description: 'Azure AD client ID for the front end'
-#   type: 'string'
-#   required: true
-#   default: 'b0c31f35-a15e-4bea-ae85-961ae07a5d14'
-# - id: 'azureAdClientSecretForFrontEnd'
-#   name: 'azureAdClientSecretForFrontEnd'
-#   description: 'Azure AD client secret for the front end'
-#   type: 'string'
-#   required: true
-# - id: 'azureAdTenantId'
-#   name: 'azureAdTenantId'
-#   description: 'Azure AD tenant ID'
-#   type: 'string'
-#   required: true
-#   default: 'b0c31f35-a15e-4bea-ae85-961ae07a5d14'
+- id: 'azureAdApiScopeFrontEnd'
+  name: 'AzureAD Api Scope Frontend'
+  description: 'Azure AD API scope for the front end'
+  type: 'string'
+  # required: true
+  default: 'api://b0c31f35-a15e-4bea-ae85-961ae07a5d14/ReliableWebApp.FrontEnd'
+
+- id: 'azureAdClientIdForBackEnd'
+  name: 'AzureAD Client Id for Backend'
+  description: 'Azure AD client ID for the back end'
+  type: 'string'
+  # required: true
+  default: 'b0c31f35-a15e-4bea-ae85-961ae07a5d14'
+
+- id: 'azureAdClientIdForFrontEnd'
+  name: 'AzureAD ClientId for Frontend'
+  description: 'Azure AD client ID for the front end'
+  type: 'string'
+  # required: true
+  default: 'b0c31f35-a15e-4bea-ae85-961ae07a5d14'
+
+- id: 'AzureAD Client Secret for Frontend'
+  name: 'azureAdClientSecretForFrontEnd'
+  description: 'Azure AD client secret for the front end'
+  type: 'string'
+  # required: true
+
+- id: 'AzureAD Tenant Id'
+  name: 'azureAdTenantId'
+  description: 'Azure AD tenant ID'
+  type: 'string'
+  # required: true
+  default: 'b0c31f35-a15e-4bea-ae85-961ae07a5d14'
