@@ -18,14 +18,14 @@ parameters:
   description: 'Principal ID of the service principal used to deploy the infrastructure'
   type: string
   required: true
-  
   # default: b0c31f35-a15e-4bea-ae85-961ae07a5d14
-# - id: isProd
-#   name: 'is Prod?'
-#   description: 'Is this a production environment?'
-#   type: boolean
-#   required: true
-#   default: false
+
+- id: isProd
+  name: 'is Prod?'
+  description: 'Is this a production environment?'
+  type: boolean
+  required: true
+  default: false
 
 # - id: secondaryAzureLocation
 #   name: 'secondaryAzureLocation'
