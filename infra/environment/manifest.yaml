@@ -25,7 +25,7 @@ parameters:
   description: 'Is this a production environment?'
   type: boolean
   required: true
-  default: false
+  default: 'false'
 
 # - id: secondaryAzureLocation
 #   name: 'secondaryAzureLocation'
