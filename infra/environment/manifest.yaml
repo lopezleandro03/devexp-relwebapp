@@ -5,12 +5,13 @@ summary: Reliable Web App regional infrastructure
 description: Deploys the Reliable Web App to one region
 runner: ARM
 templatePath: azuredeploy.json
-# parameters:
-# - id: "name"
-#   name: "name"
-#   description: "Deployment unique name"
-#   type: "string"
-#   required: true
+
+parameters:
+- id: "name"
+  name: "name"
+  description: "Deployment unique name"
+  type: "string"
+  required: true
 # - id: "principalId"
 #   name: "principalId"
 #   description: "Principal ID of the service principal used to deploy the infrastructure"
@@ -64,8 +65,8 @@ templatePath: azuredeploy.json
 #   type: "string"
 #   required: true
 # - id: "azureAdTenantId"
-  # name: "azureAdTenantId"
-  # description: "Azure AD tenant ID"
-  # type: "string"
-  # required: true
-  # default: "b0c31f35-a15e-4bea-ae85-961ae07a5d14"
+#   name: "azureAdTenantId"
+#   description: "Azure AD tenant ID"
+#   type: "string"
+#   required: true
+#   default: "b0c31f35-a15e-4bea-ae85-961ae07a5d14"
